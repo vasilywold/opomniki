@@ -1,6 +1,16 @@
+
+
 window.addEventListener('load', function() {
 	//stran nalozena
-		
+ 	var izvediPrijavo = function(event){
+		var uporabnikIme = document.querySelector("#uporabnisko_ime").value;
+		//nastavi "Pozdravljen, uporabnik!"
+		document.querySelector("#uporabnik").innerHTML = uporabnikIme;
+		//skrij pokrivalo
+		document.querySelector(".pokrivalo").style.display = "none";
+	
+	} 
+	document.querySelector("#prijavniGumb").addEventListener('click', izvediPrijavo);
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
